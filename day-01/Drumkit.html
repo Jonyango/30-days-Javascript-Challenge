@@ -3,6 +3,7 @@
 <html lang="en-US">
     <head>
         <meta charset="UTF_8">
+        <meta name="author" content="Jinet Onyango">
         <title>JS Drum-Kit</title>
         <link rel="stylesheet" href="stylesheet.css" type="text/css" media="screen">
     </head>
@@ -69,6 +70,8 @@
     audio.currentTime=0; // Enables you play a key multiple times by rewinding it to the start
     audio.play()
     key.classList.add('playing')
+    console.log(audio)
+    
     }
     
    
@@ -80,8 +83,7 @@
     const keys = document.querySelectorAll('.key');
     keys.forEach(key => key.addEventListener('transitionend',removeTransition))
     window.addEventListener('keydown',playing)
-    console.log(audio)
-    
+   
 
 </script>
 
